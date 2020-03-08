@@ -25,7 +25,6 @@
 <body class="subpage">
                 <!-- Header -->
                         <header id="header">
-                                <div class="logo"><a href="/">Asylum <span></span></a></div>
                                 <a href="#menu">Menu</a>
                         </header>
 
@@ -37,6 +36,14 @@
                                         <li><a href="/contact">Contact</a></li>
                                 </ul>
                         </nav>
+                <!-- One -->
+                        <section id="One" class="wrapper style3">
+                                <div class="inner">
+                                        <header class="align-center">
+                                                <h2>Asylum</h2>
+                                        </header>
+                                </div>
+                        </section>
 
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -86,6 +93,9 @@
                 </div>
             </div>
         </nav>
+
+
+
 
         <main class="py-4">
             @yield('content')

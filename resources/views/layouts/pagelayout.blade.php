@@ -10,7 +10,6 @@
 
                 <!-- Header -->
                         <header id="header">
-                                <div class="logo"><a href="/">Asylum <span></span></a></div>
                                 <a href="#menu">Menu</a>
                         </header>
 
