@@ -29,6 +29,7 @@ Route::get('/contact', function () {
 
 Route::get('/', 'PagesController@home');
 Route::get('/about', 'PagesController@about');
+Route::get('/generic', 'PagesController@generic');
 Route::get('/thanks', 'ContactsController@thanks');
 Route::get('/contact', 'ContactsController@create');
 Route::post('/contact', 'ContactsController@store');

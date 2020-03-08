@@ -10,6 +10,10 @@ class PagesController extends Controller
      return view('welcome');
    }
 
+   public function generic() {
+     return view('generic');
+   }
+
    public function about() {
      return view('about');
    }

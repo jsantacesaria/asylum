@@ -12,23 +12,26 @@
 				</div>
 			</section>
 
-		<!-- Two -->
-			<section id="two" class="wrapper style2">
-				<div class="inner">
-					<div class="box">
-						<div class="content">
-							<header class="align-center">
-								<h2>Who We Are</h2>
-							</header>
-                                                <p> Located in Western NY, Asylum is a private, voluntary association for adults interested in 
-	responsibly exploring BDSM. 
-	We value the central tenants of ethical BDSM - Safe, Sane and Consensual(SSC), Personal Responsibility Informed Consensual Kink (PRICK) 
-	and Risk Aware Consensual Kink( RACK). 
-	Our core values include respect, confidentiality and consent.
-	We are proudly a Coalition Partner of the 
-	<a href="https://ncsfreedom.org/our-coalition-partners/" target="_blank">NCSF(National Coalition of Sexual Freedom)</a>.</p> 
-						</div>
-					</div>
-				</div>
-			</section>
+<div class="thanks_form">
+    <h1 style="font-size:40px"><b>Contact Asylum</b></h1>
+
+<p><span class="error" style="color:#FF0000;">* required fields</span></p>
+<form method="POST" action="/contact" class="thanks_form">
+  {{ csrf_field() }}
+  Name:   <span class="error" style="color:#FF0000;">*</span>
+<input type="text" name="contact_name" required>
+  <br><br>
+  E-mail:   <span class="error" style="color:#FF0000;">*</span>
+<input type="text" name="email" required>
+  <br><br>
+  Comment: <textarea name="comments" rows="5" cols="40"></textarea>
+  <br><br>
+  <input type="submit" name="submit" style="background-color:grey;color:white;" value="Submit">
+  <br><br>
+  <br><br>
+</form>
+
+</div>
+
+
 @endsection
