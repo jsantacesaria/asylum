@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
@@ -24,7 +25,14 @@ Route::get('/generic', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+*/
 
+Route::get('/', 'PagesController@home');
+Route::get('/about', 'PagesController@about');
+Route::get('/thanks', 'ContactsController@thanks');
+Route::get('/contact', 'ContactsController@create');
+Route::post('/contact', 'ContactsController@store');
+Route::get('/login', 'PagesController@login');
 
 Auth::routes();
 
