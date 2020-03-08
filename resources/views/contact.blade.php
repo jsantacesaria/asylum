@@ -19,13 +19,13 @@
 <form method="POST" action="/contact" class="thanks_form">
   {{ csrf_field() }}
   Name:   <span class="error" style="color:#FF0000;">*</span>
-<input type="text" name="contact_name" required placeholder="Enter Name Here">
+<input type="text" name="contact_name" required placeholder="Enter Name Here" value="{{ old('contact_name')}}">
   <br><br>
   E-mail:   <span class="error" style="color:#FF0000;">*</span>
-<input type="email" name="email" required placeholder="Enter email here">
+<input type="email" name="email" required placeholder="Enter email here" value="{{ old('email')}}">
   <br><br>
   Comment: <span class="error" style="color:#FF0000;">*</span>
-  <textarea name="comments" rows="5" cols="40" maxlength="255" placeholder="What's up?" required></textarea>
+  <textarea name="comments" rows="5" cols="40" maxlength="255" placeholder="What's up?" required value="{{ old('comments')}}"></textarea>
   <br><br>
   <input type="submit" name="submit" style="background-color:grey;color:white;" value="Submit">
   <br><br>

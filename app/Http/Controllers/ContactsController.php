@@ -28,9 +28,9 @@ class ContactsController extends Controller
 
      request()->validate([
 
-         'contact_name' => 'required',
-         'email' => 'required',
-         'comments' => 'required'
+         'contact_name' => ['required',"min:5","max:40"],
+         'email' => ['required',"min:5","max:40"],
+         'comments' => ['required',"min:10","max:255"]
      ]);
 
      Contact::create([
