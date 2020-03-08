@@ -22,13 +22,24 @@
 <input type="text" name="contact_name" required placeholder="Enter Name Here">
   <br><br>
   E-mail:   <span class="error" style="color:#FF0000;">*</span>
-<input type="text" name="email" required placeholder="Enter email here">
+<input type="email" name="email" required placeholder="Enter email here">
   <br><br>
-  Comment: <textarea name="comments" rows="5" cols="40" placeholder="What's up?"></textarea>
+  Comment: <span class="error" style="color:#FF0000;">*</span>
+  <textarea name="comments" rows="5" cols="40" maxlength="255" placeholder="What's up?" required></textarea>
   <br><br>
   <input type="submit" name="submit" style="background-color:grey;color:white;" value="Submit">
   <br><br>
   <br><br>
+@if ($errors->any())
+<div class="notification is-danger">
+<ul>
+@foreach ($errors->all() as $error)
+<lii style="color:#FF0000;">{{ $error }}</li>
+@endforeach
+</ul>
+</div>
+@endif
+
 </form>
 
 </div>

@@ -26,6 +26,13 @@ class ContactsController extends Controller
      $contact->save();
 */
 
+     request()->validate([
+
+         'contact_name' => 'required',
+         'email' => 'required',
+         'comments' => 'required'
+     ]);
+
      Contact::create([
        'contact_name' => request('contact_name'),
        'email' => request('email'),
